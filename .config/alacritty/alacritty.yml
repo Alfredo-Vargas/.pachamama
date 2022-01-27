@@ -1,8 +1,11 @@
 env:
   TERM: alacritty
 
+# Window decorations
+#
 # Window Customization
 window:
+  opacity: 0.8
   dynamic_title: true
   dimensions:
     columns: 84
@@ -41,11 +44,6 @@ scrolling:
 
 # Scrolling distance multiplier.
   multiplier: 10
-# Window decorations
-#
-# Values for `decorations`:
-  decorations: none
-background_opacity: 0.8
 
 # Font configuration
 font:
