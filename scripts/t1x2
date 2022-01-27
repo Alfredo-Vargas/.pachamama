@@ -1,0 +1,5 @@
+#!/bin/bash
+tmux new -s term1x2 -d
+tmux split-window -h -t term1x2
+tmux select-pane -t 0
+tmux attach-session -t term1x2
