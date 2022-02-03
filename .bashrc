@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias dir='dir --color=auto'
 alias fd='fd -H'
 # PS1 is the variable that indicates the prompt symbol
 # PS1='[\u@\h \W]\$ ' # so your username does not appear
@@ -14,6 +15,7 @@ PS1="\W\$ " # so your username does not appear
 # PS2 is the secondary prompt
 export PS1;
 export PATH=$PATH:~/.emacs.d/bin
+export DOTFILES=$HOME/.pachamama
 
 # alias config='/usr/bin/git --git-dir=/home/alfredo/projects/my_dotfiles --work-tree=/home/alfredo'
 alias cd..='cd ..'
@@ -26,3 +28,4 @@ alias tm='cd ~/MEGA/Alfredo/thomas_more/studies_2021_2022'
 
 # set -o vi
 
+. "$HOME/.cargo/env"

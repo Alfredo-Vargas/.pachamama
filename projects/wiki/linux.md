@@ -101,10 +101,34 @@ file 'second.mp4'
 file 'third.mp4'
 ```
 
-# Stow 
+# stow 
 To synch files and to remove symbolic links:
 ```console
 stow .
 stow -D
 ```
 
+# sed
+This command stands for *_stream editor_* and can perform functions like:
+Searching, find and replace, insertion or deletion. Use the -i option to write the changes
+Examples:
+
+## To substitute every single X by Y in a file and write to the original file
+```console
+sed -i "s/X/Y/g" <file>
+```
+
+## To remove a comment and whatever comes after in the comment
+```console
+sed "s/#.*//g" <file>
+```
+
+## To remove spaces and other pattern use concatenation of substitutions with ;
+```console
+sed "s/\s*#.*//g;s/X/Y/g" <file>
+```
+
+## Deletes all lines that are empty
+```console
+sed "/^$/ d" <file>
+```

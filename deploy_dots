@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+pushd $DOTFILES
+
+for directory in $(echo $DOTFILES | sed "s/,/ /g")
+  do
+    echo $folder
+  done
+
+popd
