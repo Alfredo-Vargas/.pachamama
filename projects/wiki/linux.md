@@ -132,3 +132,8 @@ sed "s/\s*#.*//g;s/X/Y/g" <file>
 ```console
 sed "/^$/ d" <file>
 ```
+
+# Alternative to traceroute
+```console
+tracepath google.com
+```
