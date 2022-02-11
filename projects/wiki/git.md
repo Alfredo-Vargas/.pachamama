@@ -36,6 +36,10 @@ To pull the submodules use:
 ```console
 git pull --recurse-submodules
 ```
+or after pull or clone update the submodule 
+```console
+git submodule update --init
+```
 or add the recursive module flag to it as follows
 ```console
 git config submodule.recurse true

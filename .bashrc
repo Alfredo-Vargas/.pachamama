@@ -30,4 +30,4 @@ alias byebye='sh sudo shutdown -h now'
 
 # set -o vi
 
-# . "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
