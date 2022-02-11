@@ -25,7 +25,8 @@ alias t2='~/projects/scripts/t1x2'
 alias t32='~/projects/scripts/t3x2'
 alias wiki='nvim ~/projects/wiki'
 alias tm='cd ~/MEGA/Alfredo/thomas_more/studies_2021_2022'
+alias wikipush='sh ~/projects/scripts/wiki_update.sh'
 
 # set -o vi
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
