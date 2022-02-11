@@ -25,3 +25,18 @@ git checkout -b <stage>
 ```console
 git push origin <stage>
 ```
+
+# To add submodule
+Within the main repo to another repo as submodule:
+```console
+git submodule add git@github.com:Alfredo-Vargas/wordle-test.git
+```
+By default any push or pull request will ignore this submodule
+To pull the submodules use:
+```console
+git pull --recurse-submodules
+```
+or add the recursive module flag to it as follows
+```console
+git config submodule.recurse true
+```
