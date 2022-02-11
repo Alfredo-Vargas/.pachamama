@@ -1,3 +1,8 @@
+# Tree up to a number of layers
+```console
+tree -L <max number of branches>
+```
+
 # Compress/Extract zip
 ```console
 zip -r file.zip dir
