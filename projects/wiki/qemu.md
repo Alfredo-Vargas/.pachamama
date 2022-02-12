@@ -59,6 +59,12 @@ sudo pacman -S qemu-guest-agent
 sudo systemctl start qemu-guest-agent
 sudo systemctl enable qemu-guest-agent
 ```
+## Clipboard sharing and multiple monitors
+```console
+pacman -S spice-vdagent
+pacman -S xf86-video-qxl
+```
+More information in [QEMU-ARCH](https://wiki.archlinux.org/title/QEMU)
 
 ## Share Folder between Host and Guest
 Create a directory on the host and give 777 permissions.
