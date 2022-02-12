@@ -26,7 +26,8 @@ alias t32='~/projects/scripts/t3x2'
 alias wiki='nvim ~/projects/wiki'
 alias tm='cd ~/MEGA/Alfredo/thomas_more/studies_2021_2022'
 alias expresspush='sh ~/projects/scripts/wiki_update.sh'
-alias byebye='sh sudo shutdown -h now'
+alias byebye='sudo shutdown -h now'
+alias rere='sudo reboot -h now'
 
 # set -o vi
 

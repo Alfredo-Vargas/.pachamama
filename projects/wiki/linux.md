@@ -78,6 +78,12 @@ sudo pacman -Syu
 ```console
 sudo pacman -Sc
 ```
+To remove a package
+```console
+sudo pacman -R <package>
+sudo pacman -Rcns <package>
+```
+
 
 # Change keyboard layout using Xorg
 ```console
@@ -141,4 +147,26 @@ sed "/^$/ d" <file>
 # Alternative to traceroute
 ```console
 tracepath google.com
+```
+
+# Xandr
+To list displays change the scale and/or resolution
+```console
+xrandr
+xandr --output DP-4 --scale 0.8x0.8
+export GDK_SCALE=2
+```
+To see your dpi:
+```console
+xrandr | grep -B 2 resolution
+```
+To calculate the right dpi value
+```console
+xrandr | grep -w connected
+```
+Then divide your screen resolution by the dpi in mm x 10 / inches (2.54)
+E.g 1920 / (600 x 10 / 2.54) ~ 81  (new dpi value)
+
+```console
+xrandr --dpi 81
 ```
