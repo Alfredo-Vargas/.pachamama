@@ -1,4 +1,3 @@
-
 # QEMU commands in Linux
   
 ## Check if virtualization is enable and if virtualization threads are available (Virtual CPUS):

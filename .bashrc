@@ -32,3 +32,5 @@ alias rere='sudo reboot -h now'
 # set -o vi
 
 . "$HOME/.cargo/env"
+
+eval "$(starship init bash)"
