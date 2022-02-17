@@ -170,3 +170,13 @@ E.g 1920 / (600 x 10 / 2.54) ~ 81  (new dpi value)
 ```console
 xrandr --dpi 81
 ```
+
+# Change sysrq privileges
+```console
+echo "1" | sudo tee /proc/sys/kernel/sysrq
+```
+Please note that the following will NOT work:
+```
+console
+echo "1" | sudo tee /proc/sys/kernel/sysrq
+```
