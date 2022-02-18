@@ -180,3 +180,9 @@ Please note that the following will NOT work:
 console
 echo "1" | sudo tee /proc/sys/kernel/sysrq
 ```
+
+# List your services by state
+```console
+systemctl list-units --state=<state>
+```
+State: active, inactive, activating, deactivating, failed, not-found or dead

@@ -12,3 +12,9 @@ cd /var/log/
 ```console
 journalctl -p 3 -b
 ```
+
+# DWM Suckless window manager
+To apply a patch
+```console
+patch -p1 < patch.diff
+```
