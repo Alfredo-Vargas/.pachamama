@@ -11,8 +11,7 @@
 PS1="\W\$ " # so your username does not appear
 # PS2 is the secondary prompt
 export PS1;
-# export PATH=$PATH:~/.emacs.d/bin
-# export DOTFILES=$HOME/.pachamama
+export PATH="$PATH:/home/alfredo/.config/Qt/Tools/QtCreator/bin"
 
 # Aliases
 alias ls='ls --color=auto'
@@ -31,6 +30,7 @@ alias rere='sudo reboot -h now'
 
 # set -o vi
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 eval "$(starship init bash)"
+

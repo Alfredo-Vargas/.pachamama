@@ -1,3 +1,19 @@
+# Check for the window property under the Xorg server
+The action below is just clicking on any windows where the application is running.
+```
+xprop <action>
+```
+# Mount/Umount file systems
+First check the device name using `lsblk`.
+Mount a new device with name `/dev/sdd1` to `/mnt`:
+```console
+sudo mount /dev/sdd1 /mnt
+```
+To unmount a device mounted on `/mnt` (device name is an alternative)
+```console
+umount /mnt
+```
+
 # Tree up to a number of layers
 ```console
 tree -L <max number of branches>
