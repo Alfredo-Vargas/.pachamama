@@ -1,0 +1,23 @@
+# Change your wallpaper randomly
+alt + b
+  feh --bg-fill --randomize ~/.wallpapers/* 
+
+# Open your webbrowser
+alt + f
+  firefox
+
+# Toggle picom
+alt + p
+  $HOME/projects/scripts/toggle_picom.sh
+
+# Show time
+alt + t
+  $HOME/projects/scripts/date.sh
+
+# Take a print screen of all
+Print
+  flameshot full -p $HOME/Pictures/screenshots/
+
+# Take a are screen 
+shift + Print
+  flameshot gui
