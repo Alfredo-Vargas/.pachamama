@@ -18,3 +18,9 @@ To apply a patch
 ```console
 patch -p1 < patch.diff
 ```
+
+# Check the battery of your laptop
+Using the binary `upower`
+```console
+upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"
+```
