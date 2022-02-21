@@ -21,3 +21,11 @@ Print
 # Take a are screen 
 shift + Print
   flameshot gui
+
+# Open qCreator
+alt + o
+  $HOME/projects/scripts/qcreator.sh
+
+# Open android studio
+alt + l
+  $HOME/projects/scripts/studio.sh
