@@ -29,3 +29,10 @@ alt + o
 # Open android studio
 alt + l
   $HOME/projects/scripts/studio.sh
+
+# Lenovo increase/decrease brightness
+XF86MonBrightnessUp
+  xrandr --output eDP-1 --brightness .7
+
+XF86MonBrightnessDown
+  xrandr --output eDP-1 --brightness .4

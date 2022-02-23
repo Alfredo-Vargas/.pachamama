@@ -1,15 +1,3 @@
-# Check for the window property under the Xorg server
-The action below is just clicking on any windows where the application is running.
-```
-xprop <action>
-```
-
-# Check the key property under the Xorg server 
-Just press a button after running
-```console
-xev
-```
-
 # Mount/Umount file systems
 First check the device name using `lsblk`.
 Mount a new device with name `/dev/sdd1` to `/mnt`:

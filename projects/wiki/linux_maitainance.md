@@ -1,3 +1,15 @@
+# Check for the window property under the Xorg server
+The action below is just clicking on any windows where the application is running.
+```
+xprop <action>
+```
+
+# Check the key property under the Xorg server 
+Just press a button after running
+```console
+xev
+```
+
 # Check if any system services have failed
 ```console
   systemctl --failed
