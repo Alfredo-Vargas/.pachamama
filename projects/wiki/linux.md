@@ -28,6 +28,7 @@ tar -jcvf archive.tar.bz2 dir1 file1
 
 # To Extract an archive
 ```console
+tar -xf archive.xz
 tar -zxvf archive.tar.gz
 tar -zxvf archive.tar.gz -C /path/to/dir/
 tar -jxvf archive.tar.bz2
