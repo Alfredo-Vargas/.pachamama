@@ -13,6 +13,7 @@ set number
 set ignorecase
 set smartcase
 set incsearch
+set nohlsearch
 set autochdir
 set cinoptions=l1
 colorscheme elflord
