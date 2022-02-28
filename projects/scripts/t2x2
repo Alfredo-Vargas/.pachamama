@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 tmux new -s term2x2 -d
 tmux split-window
 tmux split-window

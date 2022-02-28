@@ -8,7 +8,6 @@ set guifont=Iosevka\ 20
 set guioptions-=m
 set guioptions-=T
 set noesckeys
-set relativenumber
 set number
 set ignorecase
 set smartcase

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 tmux new -s term1x2 -d
 tmux split-window -h -t term1x2
 tmux select-pane -t 0

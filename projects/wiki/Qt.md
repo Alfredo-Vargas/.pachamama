@@ -1,3 +1,8 @@
 # QDebug() not showing output
-Make sure that the build and run in the Projects menu has
-selected Desktop Qt 5.12 gcc 64 bit enabled
+Navigate to the following location:
+Qt creator > Tools > Options > Kits, select your kit, find Environment, click change and add
+```console
+QT_ASSUME_STDERR_HAS_CONSOLE=1
+```
+
+

@@ -1,3 +1,14 @@
+# Check for the window property under the Xorg server
+The action below is just clicking on any windows where the application is running.
+```
+xprop <action>
+```
+
+# Check the key property under the Xorg server 
+Just press a button after running
+```console
+xev
+```
 # Mount/Umount file systems
 First check the device name using `lsblk`.
 Mount a new device with name `/dev/sdd1` to `/mnt`:
@@ -197,4 +208,24 @@ echo "1" | sudo tee /proc/sys/kernel/sysrq
 ```console
 systemctl list-units --state=<state>
 ```
-State: active, inactive, activating, deactivating, failed, not-found or dead
+
+# Check the battery of your laptop
+Using the binary `upower`
+```console
+upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"
+```
+
+# Connect to wifi using the terminal and nmcli (Network Manager CLI)
+First check if the wifi is enabled:
+```console
+nmcli radio wifi
+```
+Check the wifi list:
+```console
+nmcli dev wifi list
+```
+Connect to the device:
+```console
+sudo nmcli dev wifi connect <device> -a
+```
+the flag is to prompt for any missing arguments (password for example)

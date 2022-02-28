@@ -32,7 +32,7 @@ alt + l
 
 # Lenovo increase/decrease brightness
 XF86MonBrightnessUp
-  xrandr --output eDP-1 --brightness .7
+  $HOME/projects/scripts/brightness_up.sh
 
 XF86MonBrightnessDown
-  xrandr --output eDP-1 --brightness .4
+  $HOME/projects/scripts/brightness_down.sh
