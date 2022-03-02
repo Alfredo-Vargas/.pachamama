@@ -1,3 +1,8 @@
+# Access your android device by installing in your Linux:
+```console
+sudo pacman -S android-file-transfer
+```
+
 # Check for the window property under the Xorg server
 The action below is just clicking on any windows where the application is running.
 ```
@@ -192,6 +197,16 @@ E.g 1920 / (600 x 10 / 2.54) ~ 81  (new dpi value)
 
 ```console
 xrandr --dpi 81
+```
+
+To connect a second monitor
+```console
+xrandr --output <DEVICE> --set audio force-dvi --mode 1920x1080
+```
+
+To place your second monitor virtually to the right:
+```console
+xrandr --output <LEFTmonitor> --auto --output <RIGHTmonitor> --right-of <LEFTmonitor>
 ```
 
 # Change sysrq privileges
