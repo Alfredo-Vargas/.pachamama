@@ -10,3 +10,8 @@ QT_ASSUME_STDERR_HAS_CONSOLE=1
 QString::number(integer);
 string.toInt();
 ```
+
+# Convert a char to integer
+```console
+charvalue.digitValue();
+```
