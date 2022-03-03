@@ -5,4 +5,8 @@ Qt creator > Tools > Options > Kits, select your kit, find Environment, click ch
 QT_ASSUME_STDERR_HAS_CONSOLE=1
 ```
 
-
+# Convert an int number to string and viceversa
+```console
+QString::number(integer);
+string.toInt();
+```
