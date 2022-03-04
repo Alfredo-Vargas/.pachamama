@@ -1,3 +1,20 @@
+# Wipe file system from USB
+The device can be for example `/dev/sdb` in some cases
+```console
+sudo wipefs --all <device>
+```
+
+# Create a partition in the USB
+```console
+sudo cfdisk <device>
+```
+Change to dos partition table, then New to create a new partition, select as primary and write changes
+
+# Make the file system in the partition
+```console
+sudo mkfs.ext4 <device>
+```
+
 # Transfer or copy files using the binary `rsync`
 To copy files:
 ```console
