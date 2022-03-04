@@ -1,3 +1,10 @@
+# Transfer or copy files using the binary `rsync`
+To copy files:
+```console
+rsync -av --progress <source> <destination>
+```
+
+
 # Access your android device by installing in your Linux:
 ```console
 sudo pacman -S android-file-transfer
