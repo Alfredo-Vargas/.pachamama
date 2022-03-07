@@ -1,5 +1,5 @@
 # Wipe file system from USB
-The device can be for example `/dev/sdb` in some cases
+The device can be for example 
 ```console
 sudo wipefs --all <device>
 ```
@@ -16,13 +16,13 @@ sudo mkfs.ext4 <device>
 ```
 
 # Transfer or copy files using the binary `rsync`
-To copy files:
+To copy files (place/omit the verbose option when needed `-av`):
 ```console
-rsync -av --progress <source> <destination>
+rsync -a --progress <source> <destination>
 ```
 
 
-# Access your android device by installing in your Linux:
+# Access your android device (mobile, gsm, phone) by installing in your Linux:
 ```console
 sudo pacman -S android-file-transfer
 ```

@@ -15,3 +15,9 @@ string.toInt();
 ```console
 charvalue.digitValue();
 ```
+
+# Quick view of widget
+Key shortcut:
+```console
+M-S-r
+```
