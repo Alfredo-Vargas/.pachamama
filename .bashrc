@@ -4,6 +4,8 @@ export EDITOR='vim'
 export VISUAL='vim'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
+# To open Android studio in DWM
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon

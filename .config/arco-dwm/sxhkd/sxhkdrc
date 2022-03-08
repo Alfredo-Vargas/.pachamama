@@ -5,6 +5,10 @@
 #################################################################
 # SUPER + FUNCTION KEYS
 #################################################################
+# Android Studio
+alt + l 
+    $HOME/projects/scripts/studio.sh
+
 # Qt Creator
 alt + o 
     $HOME/projects/scripts/qcreator.sh
@@ -165,8 +169,8 @@ ctrl + alt + g
     chromium -no-default-browser-check
 
 #Firefox
-ctrl + alt + f
-     firefox
+alt + f
+     brave
 
 #Nitrogen
 ctrl + alt + i
