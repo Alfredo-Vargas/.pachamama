@@ -80,7 +80,7 @@ sudo pacman -S qemu-guest-agent
 sudo systemctl start qemu-guest-agent
 sudo systemctl enable qemu-guest-agent
 ```
-# Clipboard sharing and multiple monitors
+# Clipboard sharing and multiple monitors (copy and paste)
 ```console
 pacman -S spice-vdagent
 pacman -S xf86-video-qxl
