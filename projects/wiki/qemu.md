@@ -90,16 +90,29 @@ More information in [QEMU-ARCH](https://wiki.archlinux.org/title/QEMU)
 # Share Folder between Host and Guest
 Create a directory on the host and give 777 permissions.
 Add a new Hardware in virt-manager, then add a new FileSystem, choose:
+## Using `virtio-9p`
 Type= mount, Mode= mapped
 Source path: /path/dir/in/host  (directory that exists on the host)
 Targetpath: /sharepoint  (name to be used when mounted- This is not located neither in the host nor in the guest)
 Then on the guest machine we create a directory, e.g "/home/paxa/wormhole" mount the directory
+
 ```console
 sudo mount -t 9p -o trans=virtio /sharepoint /home/paxa/wormhole
 ```
 To make the mounting permanent of guest add to /etc/fstab (every entry single-tab separated):
 ```console
 /sharepoint   /home/paxa/wormhole   9p   trans=virtio,version=9p2000.L,rw   0   0
+```
+## Using `virtiofs` [more info](https://virtio-fs.gitlab.io/)
+Add a new `Filesystem Passthrough` and choose: 
+```console
+Driver: virtiofs
+Source path: /host/share/dir
+Target path: /fromhost
+```
+Now on the guest machine:
+```
+sudo mount -t virtiofs /fromhost /host/share/dir
 ```
 
 # Convert virtualbox disk image vdi to qcow2
