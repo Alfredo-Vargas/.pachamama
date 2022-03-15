@@ -43,6 +43,19 @@ The contents of the `default.xml` are:
   bridge-utils
   ```
 
+# Enable `libvirtd` to have access to the required sockets
+```
+console
+sudo systemctl start libvirtd
+sudo systemctl start libvirtd
+```
+
+# Add the current user to the group `libvirt` so no sudo is required to use virt-manager:
+```
+console
+sudo usermod -G libvirt -a <username>
+```
+
 # Allow users in wheel group to manage the libvirt daemon without authentication */
   ```console
   polkit.addRule(function(action, subject) {
