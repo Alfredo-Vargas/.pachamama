@@ -17,3 +17,8 @@ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope ?
 # Icons and Emojis
 Visit the following link:
 [emoji](https://emojipedia.org)
+
+# To save on a file on readonly mode
+```console
+:w !sudo tee %
+```
