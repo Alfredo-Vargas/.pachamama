@@ -27,7 +27,10 @@ M-S-r
 2. __B__ = Pointer to the function that **emits** a signal. (Emitter)
 3. __C__ = The object that will **receive** the signal. (Receiver)
 4. __D__ = Pointer to the function that will **react** to the signal. (Reactor)
-For example:
+
+## Example 1
+For example if we want a line edit pass the info to another line edit:
 ```console
-connect(ui->)
+connect(trigger, emitter, receiver, reactor)
+connect(ui->m_lineEdit1, &QLineEdit::textChanged, [=]{QLineEdit::textChanged(m_lineEdit1->text());})
 ```
