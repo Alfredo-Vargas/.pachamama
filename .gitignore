@@ -1,3 +1,4 @@
 # To avoid the autostart.sh and config.h
 *autostart.sh*
 *config.h*
+*packer_compiled.lua*
