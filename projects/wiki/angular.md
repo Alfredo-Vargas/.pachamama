@@ -38,3 +38,4 @@ To `tty` into your docker container:
 ```console
 docker exec -it <container-name> /bin/sh
 ```
+Changing the permissions such the `id` and `gid` numbers from the container match the `id` and `gid` of the host user.
