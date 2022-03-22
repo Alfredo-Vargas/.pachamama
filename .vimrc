@@ -18,4 +18,8 @@ set cinoptions=l1
 colorscheme elflord
 inoremap jk <ESC>
 let g:mapleader = "\<Space>"
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 

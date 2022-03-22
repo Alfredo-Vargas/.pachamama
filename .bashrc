@@ -7,6 +7,9 @@ export PAGER='most'
 # To open Android studio in DWM
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# To pick a different clangd
+# export PATH="$PATH:/home/alfredo/.config/Qt/Tools/QtCreator/libexec/qtcreator/clang/bin/"
+
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon
 #delete the hashtags of the next lines and restart
