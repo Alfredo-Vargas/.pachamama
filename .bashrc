@@ -49,7 +49,7 @@ alias t2='~/projects/scripts/t1x2'
 alias t32='~/projects/scripts/t3x2'
 alias wiki='nvim ~/projects/wiki'
 alias tm='cd ~/.tm'
-alias expresspush='sh ~/projects/scripts/wiki_update.sh'
+alias expresspush='sh ~/projects/scripts/git_update.sh'
 alias byebye='sudo shutdown -h now'
 alias rere='sudo reboot -h now'
 
