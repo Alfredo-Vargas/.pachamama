@@ -1,5 +1,6 @@
 # To create a virtual environment
 Create a virtual environment named `venv_dir`, directory with the binaries:
+
 ```console
 python -m venv <venv_dir>
 ```
@@ -39,3 +40,9 @@ cd ~/.local/share/jupyter/
 git clone <chosen extension>
 ```
 Then launch jupyter and configure the extensions in Edit->Nbextensions
+
+# Check GPU usage
+
+```console
+watch -n -1 nvidia-smi
+```

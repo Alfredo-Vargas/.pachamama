@@ -7,9 +7,6 @@ export PAGER='most'
 # To open Android studio in DWM
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# To pick a different clangd
-# export PATH="$PATH:/home/alfredo/.config/Qt/Tools/QtCreator/libexec/qtcreator/clang/bin/"
-
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon
 #delete the hashtags of the next lines and restart
@@ -38,7 +35,7 @@ bind "set completion-ignore-case on"
 PS1="\W\$ " # so your username does not appear
 # PS2 is the secondary prompt
 export PS1;
-export PATH="$PATH:/home/alfredo/.config/Qt/Tools/QtCreator/bin"
+export PATH="$PATH:~/.config/Qt/Tools/QtCreator/bin"
 
 ### ALIASES ###
 
@@ -351,8 +348,7 @@ alias personal='cp -Rf /personal/* ~'
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
-[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
-
+# [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 # reporting tools - install when not installed
 # neofetch
 # screenfetch
