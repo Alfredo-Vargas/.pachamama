@@ -6,7 +6,7 @@ tmux split-window
 tmux split-window
 tmux split-window
 tmux select-layout tiled
-tmux select-pane -t 0
+tmux select-pane -t 1
 tmux attach -t term2x3
 
 
