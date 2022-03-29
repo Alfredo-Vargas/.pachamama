@@ -216,24 +216,38 @@ To calculate the right dpi value
 ```console
 xrandr | grep -w connected
 ```
+
 Then divide your screen resolution by the dpi in mm x 10 / inches (2.54)
 E.g 1920 / (600 x 10 / 2.54) ~ 81  (new dpi value)
-
 ```console
 xrandr --dpi 81
 ```
 
-To connect a second monitor
+To enable and disable a monitor:
 ```console
-xrandr --output <DEVICE> --set audio force-dvi --mode 1920x1080
+xrandr --output <DEVICE-ID> --auto
+xrandr --output <DEVICE-ID> --off
+```
+
+To connect a second monitor, 3 steps:
+```console
+xrandr --output <MAIN-monitor>  --primary
+xrandr --output <SECOND-monitor> --left-of <MAIN-monitor>
+xrandr --output <SECOND-monitor> --set audio force-dvi --mode 1920x1080
 ```
 
 To place your second monitor virtually to the right:
 ```console
-xrandr --output <LEFTmonitor> --auto --output <RIGHTmonitor> --right-of <LEFTmonitor>
+xrandr --output <LEFT-monitor> --auto --output <RIGHTmonitor> --right-of <LEFTmonitor>
 ```
 
-# Change sysrq privileges
+To create modes using `xrandr`
+```console
+xrandr --newmode <SETTINGS>
+xrandr --addmode <DISPLAY-name>
+```
+
+# Change `sysrq` privileges
 ```console
 echo "1" | sudo tee /proc/sys/kernel/sysrq
 ```
@@ -254,12 +268,12 @@ Using the binary `upower`
 upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"
 ```
 
-# Connect to wifi using the terminal and nmcli (Network Manager CLI)
-First check if the wifi is enabled:
+# Connect to `wifi` using the terminal and `nmcli` (Network Manager CLI)
+First check if the `wifi` is enabled:
 ```console
 nmcli radio wifi
 ```
-Check the wifi list:
+Check the `wifi` list:
 ```console
 nmcli dev wifi list
 ```
