@@ -232,8 +232,8 @@ xrandr --output <DEVICE-ID> --off
 To connect a second monitor, 3 steps:
 ```console
 xrandr --output <MAIN-monitor>  --primary
-xrandr --output <SECOND-monitor> --left-of <MAIN-monitor>
 xrandr --output <SECOND-monitor> --set audio force-dvi --mode 1920x1080
+xrandr --output <SECOND-monitor> --left-of <MAIN-monitor>
 ```
 
 To place your second monitor virtually to the right:

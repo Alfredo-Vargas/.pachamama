@@ -44,3 +44,6 @@ or add the recursive module flag to it as follows
 ```console
 git config submodule.recurse true
 ```
+
+# To download a directory from a Github:
+Navigate to the URL [DownGit](https://downgit.github.io/#/home)
