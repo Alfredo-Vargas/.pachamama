@@ -121,12 +121,21 @@ config config --local status.showUntrackedFiles no
 ps -ef | egrep "process|PID"   
 ```
 
-# Update and Sync pacman on Arch Linux
+# Arch Package Manager `pacman`
+
+## After first install of arch-based distro
+Update the mirrors and keyring respectively by
+```console
+sudo pacman -Syy
+sudo pacman -S archlinux-keyring
+```
+
+## Update and Sync pacman on Arch Linux
 ```console
 sudo pacman -Syu
 ```
 
-# Remove unused repositories and not longer needed dependencies
+## Remove unused repositories and not longer needed dependencies
 ```console
 sudo pacman -Sc
 ```
@@ -135,6 +144,7 @@ To remove a package
 sudo pacman -R <package>
 sudo pacman -Rcns <package>
 ```
+
 
 
 # Change keyboard layout using Xorg
