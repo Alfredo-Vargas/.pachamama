@@ -76,7 +76,7 @@ source <venv_dir>/bin/activate
 python -m pip install --upgrade pip
 ```
 
-## To install and enable VIM in Jupyter Notebook (The plugin is not longer maintained)
+## To install and enable Jupyter  Themes
 ```console
 pip install --upgrade jupyterthemes
 ```
