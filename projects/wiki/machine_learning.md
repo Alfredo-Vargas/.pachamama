@@ -58,6 +58,11 @@ conda install <package-name>
 conda remove --name <venv-name> --all
 ```
 
+## To remove a specific package
+```console
+conda remove --name <venv-name> <packname1> <packagename2> ...
+```
+
 # Python Virtual environments
 
 ## To create a virtual environment
@@ -69,6 +74,12 @@ python -m venv <venv_dir>
 ## To activate your virtual environment in Linux
 ```console
 source <venv_dir>/bin/activate
+```
+
+## To install and uninstall packages using `pip`
+```console
+pip install <package>
+pip uninstall <package>
 ```
 
 ## To upgrade pip
@@ -100,10 +111,17 @@ In my case was `~/.local/share/jupyter/`
 cd ~/.local/share/jupyter/
 git clone <chosen extension>
 ```
-Then launch jupyter and configure the extensions in Edit->Nbextensions
+Then launch `jupyter` and configure the extensions in Edit->Nbextensions
 
 # Check GPU usage
 
 ```console
 watch -n -1 nvidia-smi
 ```
+
+## Configuration with `jupyterlab`
+```console
+pip install jupyterlab
+pip install jupyterlab-lsp
+```
+Search for the themes `darcula` and vim plugins
