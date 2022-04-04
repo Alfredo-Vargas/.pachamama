@@ -1,9 +1,18 @@
-# qDebug() not showing output
+# `qDebug()` not showing output
 Navigate to the following location:
 Qt creator > Tools > Options > Kits, select your kit, find Environment, click change and add
 ```console
 QT_ASSUME_STDERR_HAS_CONSOLE=1
 ```
+## Debug Options
+```console
+qDebug() << x;
+qWarning() << "Let me warn you";
+qInfo() << "Just FYI!";
+qCritical() << "The end is near!";
+qFatal() << "Ok here it is!";
+```
+`qFatal()` sends a kill signal to the running application
 
 # Convert an integer to string and vice-versa
 ```console
@@ -68,4 +77,30 @@ the Clang compiler.
 4. `throw()` exception specification (__optional__)
 5. `-> int` return specification (__optional__)
 6. `{ ... }` lambda body.
+
+
+## Change the cc compiler of your system
+Check the line before depending on your system
+```console
+cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang ..
+```
+
+## Check your `CCache` statistics
+```console
+ccache -s
+```
+
+## Pre Compiled Header Support (`PHC`)
+Make sure you have pre-compile header support ON
+If you have pre compiled header support then include a file (e.g `KDABViewer_pch.h`) following headers:
+```console
+#pragma once
+
+#include <QApplication>
+#include <QBoxLayout>
+#include <QLabel
+#include <QVariant>
+#include <QWidget>
+#include <memory>
+```
 
