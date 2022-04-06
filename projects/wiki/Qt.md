@@ -31,15 +31,20 @@ Key shortcut:
 M-S-r
 ```
 
-# Connection Example
-1. __A__ = **The object that will send** the connection. (Sender)
-2. __B__ = The **sender** function. (&Sender)
-3. __C__ = **The object that will receive** the signal. (Receiver)
-4. __D__ = The **updater** function. (&Receiver)
+# Signal Slot Connection Example (Static Methods on `QObjects`)
+1. __A__ = Who is emitting the signal: **Emitter**
+2. __B__ = Which signal is being emitted: **Message**
+3. __C__ = Who is implementing the slot or method that we connect to: **Receiver**
+4. __D__ = Which method are we connecting to: **Response**
 In general the connection will have the following form:
 ```console
-connect(Sender, &Sender::valueChanged, receiver, &Receiver::updateValue)
+connect(Emitter, &Emitter::valueChanged, Receiver, &Receiver::updateValue)
 ```
+
+## Signal Slot Connection Variants:
+### The Second and Fourth are pointer to member functions
+### The Second and Fourth are regular strings
+### There is only three parameters where the third one is a lambda functions
 
 ## Example 1
 For example if we want a line edit pass the info to another line edit:
