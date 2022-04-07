@@ -37,33 +37,48 @@ M-S-r
 3. __C__ = Who is implementing the slot or method that we connect to: **Receiver**
 4. __D__ = Which method are we connecting to: **Response**
 In general the connection will have the following form:
+
 ```console
-connect(Emitter, &Emitter::valueChanged, Receiver, &Receiver::updateValue)
+connect(Emitter, &Emitter::valueChanged, Receiver, &Receiver::updateValue);
 ```
 
 ## Signal Slot Connection Variants:
-### The Second and Fourth are pointer to member functions
-### The Second and Fourth are regular strings
+### The Second and Fourth are pointer to member functions (Functor: Function Pointers)
+```console
+connect(const QObject * emitter, PointerToMemberFunction signal, const QObject * receiver, PointerToMemberFunction method);
+QObject::connect(slider, &QSlider::valueChanged, spin, &QSpinBox::setValue);
+```
+### The Second and Fourth are regular strings (Macro based)
+```console
+connect(const QObject * emitter, const char * signal, const QObject * receiver, const char * method);
+QObject::connect(slider, SIGNAL(valueChanged(int)) , spin, SLOT(setValue(int));
+```
+The disadvantage from the Macro based is that you do not get compilation errors!
 ### There is only three parameters where the third one is a lambda functions
+```console
+connect(const QObject * emitter, PointerToMemberFunction signal, Functor functor);
+QPushButton *button = new QPushButoon("Press Me!");
+QObject::connect(button, &QPushButton::pressed, [button] { button->setText("Release Me!");});
+```
 
-## Example 1
+- Example 1
 For example if we want a line edit pass the info to another line edit:
 ```console
-connect(ui->m_lineEdit1, &QLineEdit::textChanged, [=]{QLineEdit::textChanged(m_lineEdit1->text());})
+connect(ui->m_lineEdit1, &QLineEdit::textChanged, [=]{QLineEdit::textChanged(m_lineEdit1->text());});
 ```
 The above example has only three elements, which then has the following form:
 ```connect
-connect(Sender, &Sender::valueChanged, &Receiver::updateValue)
+connect(Sender, &Sender::valueChanged, &Receiver::updateValue);
 ```
 We can tell that the receiver is optional and is up to the `&Receiver` to determine
 which objects is/are the receiver(s) in its implementation.
 
-## Example 2
+- Example 2
 ```console
 connect(this->m_firstValue, &QLineEdit::textChanged, this->m_result ,[=]{valueChanged(m_firstValue->text(), m_secondValue->text());});
 ```
 In the above example are the most common four arguments for a connection. Omission of the third arguments flags a warning using
-the Clang compiler.
+the Clang compiler. Try to always implement the third argument when working with lambda expressions.
 
 **Note:** The symbol `[=]` is the lambda-introducer in the C++ notation.
 
