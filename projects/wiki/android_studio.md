@@ -20,6 +20,9 @@ adb devices
 ```
 
 # Theory
+## Difference between var and val
+Declarations using var can be reassigned to other values, unlike val variable declarations that can only be used to changes its properties.
+
 ## Units
 1. __`px`__ correspond to actual pixels on the screen.
 2. __`in`__ physical inches on the screen.
@@ -36,3 +39,5 @@ adb devices
 
 ### Tips:
 - Is bad practice to launch the database from the main thread, instead using a background thread.
+
+

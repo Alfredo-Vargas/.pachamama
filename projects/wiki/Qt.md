@@ -124,3 +124,6 @@ If you have pre compiled header support then include a file (e.g `KDABViewer_pch
 #include <memory>
 ```
 
+# Some theory: 
+1. Applications without UI should use `QCoreApplication` instead of `QApplication`
+2.

@@ -86,8 +86,11 @@ keymap("n", "<Space>ds", ":lua local widgets=require('dap.ui.widgets');widgets.c
 keymap("n", "<C-q>", ":Bdelete<CR>", opts) -- closes current buffer
 keymap("n", "<C-e>", ":Bwipeout<CR>", opts) -- closes wipesout buffer
 
+-- Here are General Purpose Keymaps (try to set up keymaps that are convention with other programs)
 -- NvimTreeToggle
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts) -- closes wipesout buffer
+-- Comment
+-- keymap("n", "<C-/>", gcc, opts )
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
