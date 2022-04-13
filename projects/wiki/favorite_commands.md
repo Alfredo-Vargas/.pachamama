@@ -70,6 +70,24 @@ Go to definition `gd`, go to declaration `gD`, go to implementation `gi`, show d
 Previous diagnosis `[d`, next diagnosis `]d`.
 
 ## Practical commands
+View a text file in hex mode
+```
+:%!xxd
+```
+To center current cursor to the middle of the screen `zz`
+To make neovim to read from stdin
+```console
+echo "this is a test" | nvim -
+```
+To make a diff of the current two buffers opened (in two windows) and disable it
+```console
+:windo diffthis
+:diffoff
+```
+Open two files in diff mode
+```console
+neovim -d <file1> <file2>
+```
 Go to definition and return to previous tag stack
 ```console
 gd
