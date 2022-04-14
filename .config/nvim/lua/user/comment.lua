@@ -9,6 +9,13 @@ comment.setup {
     line = 'gcc',
     block = 'gbc',
   },
+
+  opleader = {
+      ---Line-comment keymap
+      line = 'gc',
+      ---Block-comment keymap
+      block = 'gb',
+  },
   pre_hook = function(ctx)
     local U = require "Comment.utils"
 

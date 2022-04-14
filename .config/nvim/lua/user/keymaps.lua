@@ -61,10 +61,10 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- NVim-Telescope 
--- keymap("n", "<A-f>", ":Telescope find_files<CR>", opts)
--- keymap("n", "<A-g>", ":Telescope grep_string<CR>", opts)
--- keymap("n", "<A-b>", ":Telescope buffers<CR>", opts)
--- keymap("n", "<A-h>", ":Telescope help_tags<CR>", opts)
+keymap("n", "<A-g>", ":Telescope grep_string<CR>", opts)
+keymap("n", "<A-f>", ":Telescope find_files<CR>", opts)
+keymap("n", "<A-b>", ":Telescope buffers<CR>", opts)
+keymap("n", "<A-h>", ":Telescope help_tags<CR>", opts)
 
 -- Nvim-DAP -- Debug Adapter Protocol
 -- keymap("n", "<F8>", ":lua require('dap').run_last()<CR>", opts)
@@ -90,7 +90,11 @@ keymap("n", "<C-e>", ":Bwipeout<CR>", opts) -- closes wipesout buffer
 -- NvimTreeToggle
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts) -- closes wipesout buffer
 -- Comment
--- keymap("n", "<C-/>", gcc, opts )
+-- The design of vim recognizes <C-/> as <C-_> !!!
+
+keymap("n", "<C-_>", ":normal gcc<CR>", opts )
+keymap("v", "<C-_>", ":normal gb<CR>", opts )
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
