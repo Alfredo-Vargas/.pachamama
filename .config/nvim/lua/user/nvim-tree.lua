@@ -4,12 +4,12 @@ vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",
   git = {
-    unstaged = "",
-    staged = "S",
+    unstaged = "✗",
+    staged = "✓",
     unmerged = "",
     renamed = "➜",
     deleted = "",
-    untracked = "U",
+    untracked = "★",
     ignored = "◌",
   },
   folder = {
@@ -42,7 +42,8 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = true,
+  -- NvimTree auto close features has been removed
+  -- auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,

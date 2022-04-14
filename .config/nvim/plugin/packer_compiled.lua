@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/alfredo/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  colorschemes = {
+    loaded = true,
+    path = "/home/alfredo/.local/share/nvim/site/pack/packer/start/colorschemes",
+    url = "https://github.com/lunarvim/colorschemes"
+  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/home/alfredo/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
