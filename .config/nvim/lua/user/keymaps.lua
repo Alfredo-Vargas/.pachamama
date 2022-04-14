@@ -91,9 +91,8 @@ keymap("n", "<C-e>", ":Bwipeout<CR>", opts) -- closes wipesout buffer
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts) -- closes wipesout buffer
 -- Comment
 -- The design of vim recognizes <C-/> as <C-_> !!!
-
 keymap("n", "<C-_>", ":normal gcc<CR>", opts )
-keymap("v", "<C-_>", ":normal gb<CR>", opts )
+-- keymap("v", "<C-_>", ":normal gb<CR>", opts )
 
 -- Terminal --
 -- Better terminal navigation
