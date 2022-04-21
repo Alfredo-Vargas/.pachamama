@@ -13,9 +13,18 @@ Add new component (two options)
 ng generate component <component-name>
 ng g c <component-name>
 ```
+Add new pipe (two options)
+```console
+ng generate pipe <pipe-name>
+ng g p <pipe-name>
+```
 Starting the Web Server (On `http://localhost:4200`):
 ```console
 ng serve
+```
+Installing bootstrap in angular
+```console
+npm install bootstrap jquery popper.js --save
 ```
 
 ## Docker container
@@ -30,7 +39,7 @@ docker run -it --rm -w /app -v $(pwd)/<project-name>:/app alexsuch/angular-cli:1
 ```
 Running the server 
 ```console
-docker run -it --rm -w /app -v $(pwd)/<project-name>:/app -p 4200:4200 alexsuch/angular-cli:10.2.3 ng serve --host 0.0.0.0
+docke run -it --rm -w /app -v $(pwd)/<project-name>:/app -p 4200:4200 alexsuch/angular-cli:10.2.3 ng serve --host 0.0.0.0
 ```
 
 ## Managing permission between docker container and host
