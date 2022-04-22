@@ -43,7 +43,7 @@ docker run -it --rm -w /app -v $(pwd)/<project-name>:/app alexsuch/angular-cli:1
 ```
 Running the server 
 ```console
-docke run -it --rm -w /app -v $(pwd)/<project-name>:/app -p 4200:4200 alexsuch/angular-cli:10.2.3 ng serve --host 0.0.0.0
+docker run -it --rm -w /app -v $(pwd)/<project-name>:/app -p 4200:4200 alexsuch/angular-cli:10.2.3 ng serve --host 0.0.0.0
 ```
 
 ## Managing permission between docker container and host
