@@ -26,6 +26,10 @@ Installing bootstrap in angular
 ```console
 npm install bootstrap jquery popper.js --save
 ```
+To install a fresh pull project (inside the directory)
+```
+npm install
+```
 
 ## Docker container
 Creation of a project on your docker container, see [link](https://hub.docker.com/r/alexsuch/angular-cli):
