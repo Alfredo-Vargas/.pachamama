@@ -1,3 +1,7 @@
+# To clone, checkout and use custom directory
+```console
+git clone <github-repo> -b <branch-name> <custom-directory>
+```
 # Stage and unstage
 ```
 console

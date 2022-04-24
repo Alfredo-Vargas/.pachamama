@@ -1,4 +1,11 @@
 # Installation of Angular and Project Creation
+## Data Binding:
+1. Interpolation. - Inside the same component {{}}
+2. Zero-way. -  
+3. Two-way data-binding, Banana in the Box: e.g. `[(ngModel)]` = `boolean`
+4. Property binding uses square brackets `[]`: e.g. `[user] = givenUser`. `user` is in the child component and `givenUser` is in the parent Component.
+5. Event binding uses parenthesis `()`: e.g. `(createUserEvent) = "onCreateUserEvent($event)"`
+
 ## Native creation:
 Install angular
 ```console
