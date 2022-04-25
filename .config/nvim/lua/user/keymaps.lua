@@ -1,12 +1,12 @@
-local opts = { noremap = true, silent = true }
+-- local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+-- local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+vim.keymap.set("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -33,45 +33,53 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- OLD Way to remap!
+-- keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+-- keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+-- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+-- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- New way to remap!!!
+vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
+vim.keymap.set("n", "<C-Down>", ":resize +2<CR>")
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
+
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+vim.keymap.set("n", "<S-l>", ":bnext<CR>")
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>")
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+vim.keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
+vim.keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+vim.keymap.set("i", "jk", "<ESC>")
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+vim.keymap.set("v", "<A-j>", ":m .+1<CR>==")
+vim.keymap.set("v", "<A-k>", ":m .-2<CR>==")
+vim.keymap.set("v", "p", '"_dP')
 
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+vim.keymap.set("x", "J", ":move '>+1<CR>gv-gv")
+vim.keymap.set("x", "K", ":move '<-2<CR>gv-gv")
+vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv")
+vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 -- NVim-Telescope 
-keymap("n", "<A-g>", ":Telescope grep_string<CR>", opts)
-keymap("n", "<A-f>", ":Telescope find_files<CR>", opts)
-keymap("n", "<A-b>", ":Telescope buffers<CR>", opts)
-keymap("n", "<A-h>", ":Telescope help_tags<CR>", opts)
+vim.keymap.set("n", "<A-g>", ":Telescope grep_string<CR>")
+vim.keymap.set("n", "<A-f>", ":Telescope find_files<CR>")
+vim.keymap.set("n", "<A-b>", ":Telescope buffers<CR>")
+vim.keymap.set("n", "<A-h>", ":Telescope help_tags<CR>")
 
 -- Nvim-DAP -- Debug Adapter Protocol
 -- keymap("n", "<F8>", ":lua require('dap').run_last()<CR>", opts)
@@ -79,26 +87,26 @@ keymap("n", "<A-h>", ":Telescope help_tags<CR>", opts)
 -- keymap("n", "<C-j>", ":lua require('dap').step_over()<CR>", opts)
 -- keymap("n", "<C-l>", ":lua require('dap').step_into()<CR>", opts)
 -- keymap("n", "<C-k>", ":lua require('dap').step_out()<CR>", opts)
-keymap("n", "<Space>dn", ":lua require('dap').continue()<CR>", opts)
-keymap("n", "<Space>db", ":lua require('dap').toggle_breakpoint()<CR>", opts)
-keymap("n", "<Space>dk", ":lua require('dap').up()<CR>", opts)
-keymap("n", "<Space>dj", ":lua require('dap').down()<CR>", opts)
+vim.keymap.set("n", "<Space>dn", ":lua require('dap').continue()<CR>")
+vim.keymap.set("n", "<Space>db", ":lua require('dap').toggle_breakpoint()<CR>")
+vim.keymap.set("n", "<Space>dk", ":lua require('dap').up()<CR>")
+vim.keymap.set("n", "<Space>dj", ":lua require('dap').down()<CR>")
 
-keymap("n", "<Space>di", ":lua require('dap.ui.widgets').hover()<CR>", opts)
-keymap("n", "<Space>ds", ":lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>", opts)
+vim.keymap.set("n", "<Space>di", ":lua require('dap.ui.widgets').hover()<CR>")
+vim.keymap.set("n", "<Space>ds", ":lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>")
 -- keymap("n", "<F5>", ":lua require('debugHelper').attach()<CR>", opts)
 -- keymap("n", "<F5>", ":lua require('dap').debugHelper.attach()<CR>", opts)
 
 -- Vim-bbye --
-keymap("n", "<C-q>", ":Bdelete<CR>", opts) -- closes current buffer
-keymap("n", "<C-e>", ":Bwipeout<CR>", opts) -- closes wipesout buffer
+vim.keymap.set("n", "<C-q>", ":Bdelete<CR>") -- closes current buffer
+vim.keymap.set("n", "<C-e>", ":Bwipeout<CR>") -- closes wipesout buffer
 
 -- Here are General Purpose Keymaps (try to set up keymaps that are convention with other programs)
 -- NvimTreeToggle
-keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts) -- closes wipesout buffer
+vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>") -- closes wipesout buffer
 -- Comment
 -- The design of vim recognizes <C-/> as <C-_> !!!
-keymap("n", "<C-_>", ":normal gcc<CR>", opts )
+vim.keymap.set("n", "<C-_>", ":normal gcc<CR>")
 -- keymap("v", "<C-_>", ":normal gb<CR>", opts )
 
 -- Terminal --
