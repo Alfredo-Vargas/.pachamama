@@ -32,13 +32,6 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
--- Resize with arrows
--- OLD Way to remap!
--- keymap("n", "<C-Up>", ":resize -2<CR>", opts)
--- keymap("n", "<C-Down>", ":resize +2<CR>", opts)
--- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
--- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
 -- New way to remap!!!
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
 vim.keymap.set("n", "<C-Down>", ":resize +2<CR>")
@@ -82,11 +75,11 @@ vim.keymap.set("n", "<A-b>", ":Telescope buffers<CR>")
 vim.keymap.set("n", "<A-h>", ":Telescope help_tags<CR>")
 
 -- Nvim-DAP -- Debug Adapter Protocol
--- keymap("n", "<F8>", ":lua require('dap').run_last()<CR>", opts)
--- keymap("n", "<F9>", ":lua require('dap').repl.open({}, 'vsplit')<CR><C-w>v", opts)
--- keymap("n", "<C-j>", ":lua require('dap').step_over()<CR>", opts)
--- keymap("n", "<C-l>", ":lua require('dap').step_into()<CR>", opts)
--- keymap("n", "<C-k>", ":lua require('dap').step_out()<CR>", opts)
+-- vim.keymap.set("n", "<F8>", ":lua require('dap').run_last()<CR>")
+-- vim.keymap.set("n", "<F9>", ":lua require('dap').repl.open({}, 'vsplit')<CR><C-w>v")
+-- vim.keymap.set("n", "<C-j>", ":lua require('dap').step_over()<CR>")
+-- vim.keymap.set("n", "<C-l>", ":lua require('dap').step_into()<CR>")
+-- vim.keymap.set("n", "<C-k>", ":lua require('dap').step_out()<CR>")
 vim.keymap.set("n", "<Space>dn", ":lua require('dap').continue()<CR>")
 vim.keymap.set("n", "<Space>db", ":lua require('dap').toggle_breakpoint()<CR>")
 vim.keymap.set("n", "<Space>dk", ":lua require('dap').up()<CR>")
@@ -94,8 +87,8 @@ vim.keymap.set("n", "<Space>dj", ":lua require('dap').down()<CR>")
 
 vim.keymap.set("n", "<Space>di", ":lua require('dap.ui.widgets').hover()<CR>")
 vim.keymap.set("n", "<Space>ds", ":lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>")
--- keymap("n", "<F5>", ":lua require('debugHelper').attach()<CR>", opts)
--- keymap("n", "<F5>", ":lua require('dap').debugHelper.attach()<CR>", opts)
+-- vim.keymap.set("n", "<F5>", ":lua require('debugHelper').attach()<CR>")
+-- vim.keymap.set("n", "<F5>", ":lua require('dap').debugHelper.attach()<CR>")
 
 -- Vim-bbye --
 vim.keymap.set("n", "<C-q>", ":Bdelete<CR>") -- closes current buffer
@@ -111,8 +104,8 @@ vim.keymap.set("n", "<C-_>", ":normal gcc<CR>")
 
 -- Terminal --
 -- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- vim.keymap.set("t", "<C-h>", "<C-\\><C-N><C-w>h")
+-- vim.keymap.set("t", "<C-j>", "<C-\\><C-N><C-w>j")
+-- vim.keymap.set("t", "<C-k>", "<C-\\><C-N><C-w>k")
+-- vim.keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l")
 
