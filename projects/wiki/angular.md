@@ -59,3 +59,7 @@ To `tty` into your docker container:
 docker exec -it <container-name> /bin/sh
 ```
 Changing the permissions such the `id` and `gid` numbers from the container match the `id` and `gid` of the host user.
+
+## Programming Principles:
+1. DRY principle: Do Not Repeat Yourself
+2. Simple Responsibility Principle
