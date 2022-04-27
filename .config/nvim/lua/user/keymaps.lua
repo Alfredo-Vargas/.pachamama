@@ -1,8 +1,7 @@
 -- local opts = { noremap = true, silent = true }
-
 -- local term_opts = { silent = true }
 
--- Shorten function name
+-- Shorten function name (old way to set keymaps)
 -- local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
@@ -101,6 +100,11 @@ vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>") -- closes wipesout buffer
 -- The design of vim recognizes <C-/> as <C-_> !!!
 vim.keymap.set("n", "<C-_>", ":normal gcc<CR>")
 -- keymap("v", "<C-_>", ":normal gb<CR>", opts )
+
+-- Colorscheme Material toggler
+--Lua:
+vim.keymap.set("n", "<Space>m", ":lua require('material.functions').toggle_style()<CR>")
+vim.keymap.set("n", "<Space>,", ":colorscheme darkplus<CR>")
 
 -- Terminal --
 -- Better terminal navigation
