@@ -84,6 +84,7 @@ alias df='df -h'
 #keyboard
 alias give-me-azerty-be="sudo localectl set-x11-keymap be"
 alias give-me-qwerty-us="sudo localectl set-x11-keymap us"
+alias give-me-qwerty-br="sudo localectl set-x11-keymap br-abnt2"
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"

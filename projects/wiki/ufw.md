@@ -1,4 +1,4 @@
- # My (ufw Uncomplicated Firewal) configurations:
+ # My (ufw Uncomplicated Firewall) configurations:
   1. We first activate ufw
   ```bash
   sudo systemctl enable ufw.service
