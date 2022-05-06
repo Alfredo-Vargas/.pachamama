@@ -273,9 +273,10 @@ systemctl list-units --state=<state>
 ```
 
 # Check the battery of your laptop
-Using the binary `upower`
+Using the binary `upower` you have two options:
 ```console
 upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"
+upower -i /org/freedesktop/UPower/devices/battery_BAT1
 ```
 
 # Connect to `wifi` using the terminal and `nmcli` (Network Manager CLI)
@@ -292,3 +293,12 @@ Connect to the device:
 sudo nmcli dev wifi connect <device> -a
 ```
 the flag is to prompt for any missing arguments (password for example)
+
+# Laptop screen brightness
+First check which type of backlight do you have:
+```console
+ls /sys/class/backlight/
+cat /sys/class/backlight/max_brightness
+echo <new-value> > /sys/class/backlight/intel_backlight/brightness
+```
+Then just change it using `sudo` privileges
