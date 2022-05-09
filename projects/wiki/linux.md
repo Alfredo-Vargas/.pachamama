@@ -298,7 +298,7 @@ the flag is to prompt for any missing arguments (password for example)
 First check which type of backlight do you have:
 ```console
 ls /sys/class/backlight/
-cat /sys/class/backlight/max_brightness
+cat /sys/class/backlight/<intel_backlight>/max_brightness
 echo <new-value> > /sys/class/backlight/intel_backlight/brightness
 ```
 Then just change it using `sudo` privileges
