@@ -90,6 +90,9 @@ chmod 644 $(find /path/to/base/dir -type f)
 # To install Nerd Fonts
 Go to the [Hacker Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack)
 
+# To install jetBrains Mono
+Go to [jetBrains Mono](https://www.jetbrains.com/lp/mono/)
+
 Place the 'ttf' or 'otf' files on `~./local/share/fonts`
 
 # To check size of a directory
