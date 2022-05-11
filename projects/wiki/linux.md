@@ -247,6 +247,7 @@ To connect a second monitor, 3 steps:
 xrandr --output <MAIN-monitor>  --primary
 xrandr --output <SECOND-monitor> --set audio force-dvi --mode 1920x1080
 xrandr --output <SECOND-monitor> --left-of <MAIN-monitor>
+xrandr --output <SECOND-monitor> --right-of <MAIN-monitor>
 ```
 
 To place your second monitor virtually to the right:
@@ -305,3 +306,8 @@ cat /sys/class/backlight/<intel_backlight>/max_brightness
 echo <new-value> > /sys/class/backlight/intel_backlight/brightness
 ```
 Then just change it using `sudo` privileges
+
+# Kitty Terminal Emulator themes:
+```console
+kitty +kitten themes
+```
