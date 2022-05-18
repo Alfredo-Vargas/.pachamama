@@ -63,3 +63,27 @@ Changing the permissions such the `id` and `gid` numbers from the container matc
 ## Programming Principles:
 1. DRY principle: Do Not Repeat Yourself
 2. Simple Responsibility Principle
+
+## Express Server Integration Nodejs microservice
+To Install Nodejs express globally:
+```console
+npm -i g express-generator
+```
+To name the recently created microservice:
+```console
+express <microservice-name>
+```
+To run the microservice
+```console
+npm start app.js
+```
+To avoid restart of the server when changes are made install on the microservice directory:
+```console
+npm i nodemon
+```
+or if the above did not install the binary `nodemon` correctly then:
+```console
+sudo npm install -g --force nodemon
+```
+
+

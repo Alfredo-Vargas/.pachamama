@@ -54,10 +54,14 @@ umount /mnt
 tree -L <max number of branches>
 ```
 
-# Compress/Extract zip
+# Compress zip
 ```console
 zip -r file.zip dir
+```
+# Extract zip to a directory
+```console
 unzip file.zip
+unzip file.zip -d <dir-name>
 ```
 
 # To Compress tar
