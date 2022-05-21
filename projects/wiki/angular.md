@@ -53,6 +53,12 @@ Running the server
 docker run -it --rm -w /app -v $(pwd)/<project-name>:/app -p 4200:4200 alexsuch/angular-cli:10.2.3 ng serve --host 0.0.0.0
 ```
 
+## Can't Resolve rxjs
+When this issue appear one needs to install
+```console
+npm install --save rxjs-compat
+```
+
 ## Managing permission between docker container and host
 To `tty` into your docker container:
 ```console
