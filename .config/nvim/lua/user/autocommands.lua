@@ -45,6 +45,25 @@ vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+  callback = function()
+    vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = { "*.java" },
+  callback = function()
+    vim.lsp.codelens.refresh()
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  callback = function()
+    vim.cmd "hi link illuminatedWord LspReferenceText"
+  end,
+})
+
 vim.cmd [[
   " augroup _general_settings
   "   autocmd!
@@ -77,18 +96,18 @@ vim.cmd [[
   "   autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   " augroup end
 
-  augroup illuminate_augroup
-    autocmd!
-    autocmd VimEnter * hi link illuminatedWord LspReferenceText
-  augroup END
+  " augroup illuminate_augroup
+  "   autocmd!
+  "   autocmd VimEnter * hi link illuminatedWord LspReferenceText
+  " augroup END
 
  " let ftToEnable = ['java']
-  augroup codelens
-    autocmd!
-    autocmd BufWritePost *.java lua vim.lsp.codelens.refresh()
-  augroup END
+  " augroup codelens
+  "   autocmd!
+  "   autocmd BufWritePost *.java lua vim.lsp.codelens.refresh()
+  " augroup END
 
-  autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+  " autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 ]]
 
 -- vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter", "BufFilePost" }, {
@@ -128,23 +147,3 @@ vim.cmd [[
 --     vim.cmd "set formatoptions-=cro"
 --   end,
 -- })
---
--- vim.api.nvim_create_autocmd({ "TextYankPost" }, {
---   callback = function()
---     vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
---   end,
--- })
---
--- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
---   pattern = { "*.java" },
---   callback = function()
---     vim.lsp.codelens.refresh()
---   end,
--- })
---
--- vim.api.nvim_create_autocmd({ "VimEnter" }, {
---   callback = function()
---     vim.cmd "hi link illuminatedWord LspReferenceText"
---   end,
--- })
---
