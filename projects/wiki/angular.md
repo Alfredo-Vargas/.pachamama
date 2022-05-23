@@ -92,4 +92,19 @@ or if the above did not install the binary `nodemon` correctly then:
 sudo npm install -g --force nodemon
 ```
 
+## Cross Origin Resource `CORS` Error
+This type of error looks as follows:
+`Access to XMLHttpRequest at 'http://localhost:3000/photos' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.`
+To allow this cross communication one needs to install on the `api` of the server the following:
+```console
+npm i cors
+```
+Then we include in the `app.js` the following:
+```console
+var cors = require('cors');
+```
+And before the statements for defining routes we must use the `cors`:
+```console
+app.use(cors());
+```
 
