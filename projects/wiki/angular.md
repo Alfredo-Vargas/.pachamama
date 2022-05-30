@@ -91,6 +91,10 @@ or if the above did not install the binary `nodemon` correctly then:
 ```console
 sudo npm install -g --force nodemon
 ```
+to run nodemon for the express js
+```console
+nodemon index.js
+```
 
 ## Cross Origin Resource `CORS` Error
 This type of error looks as follows:
